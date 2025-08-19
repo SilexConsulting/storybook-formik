@@ -1,4 +1,4 @@
-import { addons, makeDecorator, useArgs } from '@storybook/preview-api';
+import { addons, makeDecorator, useArgs } from 'storybook/preview-api';
 import { Form, Formik } from 'formik';
 import React, { ReactNode, useEffect } from 'react';
 import {

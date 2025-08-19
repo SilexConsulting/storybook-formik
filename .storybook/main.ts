@@ -1,10 +1,6 @@
 export default {
   stories: ['../stories/**/*.stories.tsx'],
-  addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    './local-presets.js',
-  ],
+  addons: ['@storybook/addon-links', './local-presets.js', '@storybook/addon-docs'],
   core: {
     builder: '@storybook/builder-vite',
   },

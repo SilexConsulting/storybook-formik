@@ -1,10 +1,10 @@
-import { STORY_RENDERED } from '@storybook/core-events';
-import { useChannel } from '@storybook/manager-api';
+import { STORY_RENDERED } from 'storybook/internal/core-events';
+import { useChannel } from 'storybook/manager-api';
 import { FormikState } from 'formik';
 import React, { CSSProperties, memo, useState } from 'react';
 import { JSONTree } from 'react-json-tree';
 
-import { AddonPanel } from '@storybook/components';
+import { AddonPanel } from 'storybook/internal/components';
 import { EVT_ON_SUBMIT, EVT_RENDER, EVT_SUBMIT } from './shared';
 
 const trafficLightStyle: CSSProperties = {
@@ -131,6 +131,7 @@ export const FormikPanel = memo(({ active }: { active?: boolean }) => {
 
   return (
     <AddonPanel active={!!active}>
+      <>
       <style dangerouslySetInnerHTML={{ __html: injectCss }} />
       <div style={style.container}>
         <div style={style.header}>
@@ -165,6 +166,7 @@ export const FormikPanel = memo(({ active }: { active?: boolean }) => {
           */}
         </div>
       </div>
+      </>
     </AddonPanel>
   );
 });
